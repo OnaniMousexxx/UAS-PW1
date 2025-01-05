@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengguna</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Profil Pengguna</h2>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="index.html">Login</a></li>
+            </ul>
+            <button id="logoutButton">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section id="userProfile" class="profile-container">
+            <div class="profile-header">
+                <div class="profile-details">
+                    <div class="profile-image">
+                        <img id="userPhoto" src="default-profile.jpg" alt="Foto Profil" />
+                    </div>                    
+                    <h3 id="userFullName">Nama Lengkap</h3>
+                    <p><strong>Email:</strong> <span id="userEmail">Email</span></p>
+                    <p><strong>Username:</strong> <span id="userUsername">Username</span></p>
+                    <button id="editProfileButton">Edit Profil</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 QuickSell. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>

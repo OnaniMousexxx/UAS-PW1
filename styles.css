@@ -1,0 +1,328 @@
+/* Root Variables for Theme Colors */
+:root {
+    --primary-color: #0F4C81;  /* Sapphire Blue */
+    --secondary-color: #2C2C2E; /* Graphite Gray */
+    --accent-color: #BBE1FA;  /* Ice Blue */
+    --text-color: #F7F7F7;    /* Pearl White */
+    --background-color: #181818; /* Obsidian Black */
+    --border-color: #4F4F4F;  /* Cool Gray */
+}
+
+
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #191970;
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Form Elements */
+form {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+table th, table td {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    color: var(--text-color);
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header.dark-mode, footer.dark-mode, table.dark-mode {
+    background-color: var(--secondary-color);
+}
+
+button.dark-mode {
+    background-color: var(--primary-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #191970;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#hero button {
+    font-size: 1rem;
+}
+
+/* Features Section */
+#features {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    max-width: 350px; 
+    text-align: center;
+}
+
+.feature-item img {
+    width: 120px; 
+    height: auto;
+    margin-bottom: 1.5rem; 
+}
+
+
+/* Stats Section */
+#stats {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.testimonial-slider blockquote {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-slider cite {
+    font-weight: bold;
+}
+
+/* Call-to-Action Section */
+#cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+#cta button {
+    font-size: 1rem;
+    background-color: var(--accent-color);
+}
+
+#userTransactions table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#userTransactions table th,
+#userTransactions table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+}
+
+#userTransactions table th {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.profile-container {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 1rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hubungi Kami</h1>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <h2>Informasi Kontak</h2>
+            <p>Silakan hubungi kami melalui informasi di bawah ini:</p>
+            <ul>
+                <li><strong>Alamat:</strong> Jl. Raya Bisnis No. 123, Jakarta, Indonesia</li>
+                <li><strong>Email:</strong> <a href="mailto:support@quicksell.com">support@quicksell.com</a></li>
+                <li><strong>Telepon:</strong> <a href="tel:+628123456789">+62 812-3456-789</a></li>
+                <li><strong>Jam Operasional:</strong> Senin - Jumat, 09:00 - 17:00 WIB</li>
+            </ul>
+        </section>
+
+        <section id="contact-form">
+            <h2>Kirim Pesan</h2>
+            <form id="formContact" action="mailto:support@quicksell.com" method="post" enctype="text/plain">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini" rows="5" required></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 QuickSell. Semua Hak Dilindungi.</p>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Tentang Kami</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

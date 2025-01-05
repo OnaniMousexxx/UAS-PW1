@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Riwayat Transaksi</h2>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="index.html">Login</a></li>
+            </ul>
+            <button id="logoutButton">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <form id="formTransaksi">
+            <label for="namaTransaksi">Nama Transaksi:</label>
+            <input type="text" id="namaTransaksi" placeholder="Masukkan nama transaksi" required>
+        
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" placeholder="Masukkan jumlah transaksi" required>
+        
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Elektronik">Elektronik</option>
+                <option value="Pakaian">Pakaian</option>
+            </select>
+        
+            <button type="submit">Simpan</button>
+        </form>
+                
+        <table id="daftarTransaksi">
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                    <th>Tanggal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5">Belum ada transaksi.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 QuickSell. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
